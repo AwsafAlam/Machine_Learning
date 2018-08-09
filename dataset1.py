@@ -14,6 +14,6 @@ load_breast_cancer()	Load and return the breast cancer wisconsin dataset (classi
 
 '''
 
-print iris.feature_names
-print iris.data
-print iris.target
+print(iris.feature_names)
+print(iris.data)
+print(iris.target)
