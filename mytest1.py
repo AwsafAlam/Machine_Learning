@@ -12,9 +12,6 @@ filename = 'mydataset1.csv'
 dataset = pandas.read_csv(filename)
 
 
-
-
-
 print(dataset.values)
 array = dataset.values
 
@@ -30,7 +27,7 @@ predictor = LogisticRegression()
 #predictor = KNeighborsClassifier()
 #predictor = DecisionTreeClassifier()
 #predictor = GaussianNB()
-#predictor = SVC()
+# predictor = SVC()
 
 predictor.fit(X,Y)
 
@@ -39,9 +36,9 @@ sample = [[5.1,40]] ##sample  for test
 
 outcome = predictor.predict(sample)
 
-#cv_results = model_selection.cross_val_score(predictor, X_train, Y_train, cv=4, scoring='accuracy')
+cv_results = model_selection.cross_val_score(predictor, X_train, Y_train, cv=4, scoring='accuracy')
 
-#print cv_results.mean()
+print (cv_results.mean())
 
 print ("predicted result:")
 print (outcome)
